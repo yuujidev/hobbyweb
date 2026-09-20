@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cộng đồng ERIFTverse - nơi chia sẻ, hỏi đáp và bàn luận về mô hình.">
+    <title>ERIFTVERSE | Cộng đồng</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="community-page">
+    <div class="noise"></div>
+    <header class="site-header" id="trang-chu">
+        <a class="brand" href="../home/index.html" aria-label="ERIFTverse">
+            <span class="brand-mark">E</span>
+            <span>ERIFT<span class="brand-dot">VERSE</span></span>
+        </a>
+        <nav class="catalog-nav" aria-label="Điều hướng cộng đồng">
+            <a href="../home/index.html">Trang chủ</a>
+            <a href="../list/index.html">Sản phẩm</a>
+            <a class="catalog-upload-link" href="#tao-chu-de">Tạo chủ đề <span>＋</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="community-hero section-wrap">
+            <div>
+                <p class="eyebrow"><span></span> ERIFTVERSE / OPEN CHANNEL</p>
+                <h1>NÓI CHUYỆN<br><em>CÙNG NHAU.</em></h1>
+            </div>
+            <p class="catalog-intro">Hỏi đáp, chia sẻ kinh nghiệm build và tìm những người cùng chung niềm vui sưu tầm.</p>
+        </section>
+
+        <section class="community-create section-wrap" id="tao-chu-de">
+            <div class="community-create-heading">
+                <p class="eyebrow"><span></span> START A CONVERSATION</p>
+                <h2>TẠO MỘT<br><em>CHỦ ĐỀ MỚI.</em></h2>
+            </div>
+            <form class="community-form" id="discussion-form" novalidate>
+                <div class="community-form-row">
+                    <div>
+                        <label for="discussion-author">Tên hiển thị</label>
+                        <input id="discussion-author" type="text" maxlength="35" placeholder="Ví dụ: Minh Builder" required>
+                    </div>
+                    <div>
+                        <label for="discussion-category">Chủ đề</label>
+                        <select id="discussion-category">
+                            <option>Hỏi đáp</option>
+                            <option>Khoe build</option>
+                            <option>Mua bán - trao đổi</option>
+                            <option>Tin tức hobby</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="discussion-title">Tiêu đề</label>
+                <input id="discussion-title" type="text" maxlength="90" placeholder="Bạn muốn bàn luận điều gì?" required>
+                <label for="discussion-content">Nội dung</label>
+                <textarea id="discussion-content" rows="4" maxlength="500" placeholder="Chia sẻ câu hỏi hoặc câu chuyện của bạn..." required></textarea>
+                <div class="discussion-extra-fields" id="showcase-fields" hidden>
+                    <label for="discussion-link">Link bài đăng sản phẩm</label>
+                    <input id="discussion-link" type="url" placeholder="https://...">
+                    <small class="field-help">Dán link bài đăng hình hoặc link sản phẩm bạn muốn chia sẻ.</small>
+                </div>
+                <div class="discussion-extra-fields" id="trade-fields" hidden>
+                    <label for="discussion-image">Ảnh sản phẩm</label>
+                    <input id="discussion-image" type="file" accept="image/png,image/jpeg,image/webp" multiple>
+                    <small class="field-help">Có thể chọn tối đa 6 ảnh · mỗi ảnh tối đa 1.5MB · tổng tối đa 5MB.</small>
+                    <div class="discussion-image-previews" id="discussion-image-previews" aria-live="polite"></div>
+                    <label for="discussion-price">Giá</label>
+                    <input id="discussion-price" type="text" maxlength="30" placeholder="Ví dụ: 1.200.000đ">
+                    <label class="checkbox-label" for="discussion-negotiable"><input id="discussion-negotiable" type="checkbox"> Giá cả thương lượng</label>
+                </div>
+                <div class="community-submit-row">
+                    <button class="button button-primary" type="submit">Đăng chủ đề <span>↗</span></button>
+                    <p class="form-message" id="discussion-message" role="status"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="community-feed section-wrap" aria-labelledby="discussion-heading">
+            <div class="community-feed-heading">
+                <div>
+                    <p class="eyebrow"><span></span> COMMUNITY BOARD</p>
+                    <h2 id="discussion-heading">CÁC CUỘC<br><em>TRÒ CHUYỆN.</em></h2>
+                </div>
+                <p class="catalog-count" id="discussion-count" aria-live="polite"></p>
+            </div>
+            <div class="discussion-list" id="discussion-list"></div>
+            <nav class="pagination" id="discussion-pagination" aria-label="Phân trang chủ đề"></nav>
+        </section>
+    </main>
+
+    <footer class="site-footer section-wrap"><span>© <span id="year"></span> ERIFTverse</span><a href="../home/index.html">Về trang chủ ↗</a></footer>
+    <script src="../script/community.js"></script>
+</body>
+</html>

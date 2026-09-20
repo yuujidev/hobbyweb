@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khu vực quản trị model kit ERIFTverse.">
+    <title>ERIFTVERSE | Admin Model Kit</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="admin-page">
+    <div class="noise"></div>
+    <header class="site-header" id="trang-chu">
+        <a class="brand" href="../home/index.html" aria-label="ERIFTverse">
+            <span class="brand-mark">E</span>
+            <span>ERIFT<span class="brand-dot">VERSE</span></span>
+        </a>
+        <nav class="catalog-nav" aria-label="Điều hướng quản trị">
+            <a href="../home/index.html">Trang chủ</a>
+            <a href="../models/index.html">Model kit</a>
+            <button class="admin-logout" id="admin-logout" type="button" hidden>Đăng xuất</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-hero section-wrap">
+            <p class="eyebrow"><span></span> ERIFTVERSE / PRIVATE AREA</p>
+            <h1>MODEL KIT<br><em>CONTROL ROOM.</em></h1>
+        </section>
+
+        <section class="admin-section section-wrap">
+            <div class="admin-login" id="admin-login-panel">
+                <p class="eyebrow"><span></span> ADMIN ACCESS</p>
+                <h2>YÊU CẦU<br><em>ĐĂNG NHẬP.</em></h2>
+                <form id="admin-login-form">
+                    <p class="admin-access-message">Vui lòng đăng nhập bằng tài khoản admin để mở khu vực đăng sản phẩm chính hãng.</p>
+                    <a class="button button-primary" href="../auth/index.html">Đi tới đăng nhập <span>↗</span></a>
+                </form>
+            </div>
+
+            <div class="admin-dashboard" id="admin-dashboard" hidden>
+                <div class="admin-dashboard-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> AUTHORIZED SESSION</p>
+                        <h2>THÊM MODEL<br><em>KIT MỚI.</em></h2>
+                    </div>
+                    <p class="admin-note">Link sản phẩm sẽ xuất hiện trên trang Model Kit Radar cho cộng đồng.</p>
+                </div>
+                <form class="admin-form" id="model-form">
+                    <div class="community-form-row">
+                        <div>
+                            <label for="model-name">Tên model kit</label>
+                            <input id="model-name" type="text" maxlength="80" placeholder="Ví dụ: MGSD Gundam Barbatos" required>
+                        </div>
+                        <div>
+                            <label for="model-brand">Thương hiệu</label>
+                            <input id="model-brand" type="text" maxlength="35" value="Bandai" required>
+                        </div>
+                    </div>
+                    <div class="community-form-row">
+                        <div>
+                            <label for="model-category">Dòng sản phẩm</label>
+                            <select id="model-category">
+                                <option>Gunpla</option>
+                                <option>Figure-rise</option>
+                                <option>30 Minutes Missions</option>
+                                <option>Model kit khác</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="model-price">Giá tham khảo</label>
+                            <input id="model-price" type="text" maxlength="30" placeholder="1.200.000đ">
+                        </div>
+                    </div>
+                    <label for="model-link">Link sản phẩm</label>
+                    <input id="model-link" type="url" placeholder="https://example.com/model-kit" required>
+                    <label for="model-image">Link ảnh sản phẩm <span>(không bắt buộc)</span></label>
+                    <input id="model-image" type="url" placeholder="https://example.com/image.jpg">
+                    <label for="model-description">Mô tả ngắn</label>
+                    <textarea id="model-description" rows="3" maxlength="260" placeholder="Điểm nổi bật của model kit..."></textarea>
+                    <div class="community-submit-row">
+                        <button class="button button-primary" type="submit">Đăng model kit <span>↗</span></button>
+                        <p class="form-message" id="model-message" role="status"></p>
+                    </div>
+                </form>
+                <div class="admin-items" id="admin-items"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer section-wrap"><span>© <span id="year"></span> ERIFTverse</span><a href="../models/index.html">Xem trang công khai ↗</a></footer>
+    <script src="../script/admin.js"></script>
+</body>
+</html>

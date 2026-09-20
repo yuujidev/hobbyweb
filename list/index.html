@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danh sách sản phẩm cộng đồng ERIFTverse.">
+    <title>ERIFTVERSE | Tất cả sản phẩm</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="catalog-page">
+    <div class="noise"></div>
+    <header class="site-header" id="trang-chu">
+        <a class="brand" href="../home/index.html" aria-label="ERIFTverse">
+            <span class="brand-mark">E</span>
+            <span>ERIFT<span class="brand-dot">VERSE</span></span>
+        </a>
+        <nav class="catalog-nav" aria-label="Điều hướng catalog">
+            <a href="../home/index.html">Trang chủ</a>
+            <a href="../community/index.html">Cộng đồng</a>
+            <a class="catalog-upload-link" href="../home/index.html#dang-san-pham">Đăng sản phẩm <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalog-hero section-wrap">
+            <div>
+                <p class="eyebrow"><span></span> COMMUNITY CATALOG</p>
+                <h1>TẤT CẢ<br><em>SẢN PHẨM.</em></h1>
+            </div>
+            <p class="catalog-intro">Khám phá các item được chia sẻ bởi cộng đồng Eriftverse. Mỗi trang hiển thị 20 bài đăng mới nhất.</p>
+        </section>
+
+        <section class="catalog-section section-wrap" aria-labelledby="catalog-title">
+            <div class="catalog-toolbar">
+                <div>
+                    <p class="eyebrow"><span></span> BỘ SƯU TẬP CỘNG ĐỒNG</p>
+                    <h2 id="catalog-title">ITEMS<br><em>ĐANG LÊN SÓNG.</em></h2>
+                </div>
+                <p class="catalog-count" id="catalog-count" aria-live="polite"></p>
+            </div>
+            <div class="catalog-grid" id="catalog-grid"></div>
+            <nav class="pagination" id="pagination" aria-label="Phân trang sản phẩm"></nav>
+        </section>
+    </main>
+
+    <footer class="site-footer section-wrap"><span>© <span id="year"></span> ERIFTverse</span><a href="../home/index.html#dang-san-pham">Đăng sản phẩm mới ↗</a></footer>
+    <script src="../script/list.js"></script>
+</body>
+</html>

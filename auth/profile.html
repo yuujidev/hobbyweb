@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERIFTVERSE | Thông tin cá nhân</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="auth-page account-page">
+    <div class="noise"></div>
+    <header class="site-header">
+        <a class="brand" href="../home/index.html" aria-label="ERIFTverse"><span class="brand-mark">E</span><span>ERIFT<span class="brand-dot">VERSE</span></span></a>
+        <nav class="catalog-nav" aria-label="Điều hướng tài khoản"><a href="../home/index.html">Trang chủ</a><a href="security.html">Cài đặt bảo mật</a></nav>
+    </header>
+    <main class="account-main section-wrap">
+        <section class="account-heading"><p class="eyebrow"><span></span> MEMBER PROFILE</p><h1>THÔNG TIN<br><em>CÁ NHÂN.</em></h1><p>Thông tin này được lấy từ hồ sơ bạn đã nhập khi đăng ký tài khoản.</p></section>
+        <section class="account-panel" id="profile-panel"><p class="eyebrow"><span></span> YOUR DATA</p><div class="profile-list" id="profile-view"><div><small>Username</small><strong id="profile-username"></strong></div><div><small>Gmail</small><strong id="profile-email"></strong></div><div><small>Số điện thoại</small><strong id="profile-phone"></strong></div><div><small>Trạng thái email</small><strong id="profile-status">Đã xác nhận</strong></div></div><button class="button button-primary" id="edit-profile-button" type="button">Chỉnh sửa thông tin <span>↗</span></button><form class="auth-form" id="profile-form" hidden><label for="profile-username-input">Username</label><input id="profile-username-input" type="text" maxlength="30" required><label for="profile-phone-input">Số điện thoại</label><input id="profile-phone-input" type="tel" autocomplete="tel" placeholder="0901234567"><p class="form-message" id="profile-message" role="status"></p><button class="button button-primary" type="submit">Cập nhật thông tin <span>↗</span></button></form><form class="auth-form" id="profile-otp-form" hidden><p class="otp-description" id="profile-otp-description"></p><label for="profile-otp-code">Mã OTP 6 số</label><input id="profile-otp-code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required><p class="form-message" id="profile-otp-message" role="status"></p><button class="button button-primary" type="submit">Xác nhận OTP <span>↗</span></button></form><div class="account-danger"><p class="danger-label">XÓA TÀI KHOẢN</p><p>Tác vụ này không thể hoàn tác. Bạn sẽ cần xác nhận bằng OTP Gmail.</p><button class="button button-danger" id="delete-account-button" type="button">Gửi OTP để xóa tài khoản <span>↗</span></button><form class="auth-form" id="delete-otp-form" hidden><p class="otp-description" id="delete-otp-description"></p><label for="delete-otp-code">Mã OTP 6 số</label><input id="delete-otp-code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required><p class="form-message" id="delete-otp-message" role="status"></p><button class="button button-danger" type="submit">Xác nhận xóa tài khoản <span>↗</span></button></form></div></section>
+    </main>
+    <footer class="site-footer section-wrap"><span>© <span id="year"></span> ERIFTverse</span><a href="../home/index.html">Về trang chủ ↗</a></footer>
+    <script src="../script/account.js"></script>
+</body>
+</html>

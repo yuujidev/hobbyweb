@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đăng nhập và đăng ký tài khoản ERIFTverse.">
+    <title>ERIFTVERSE | Tài khoản</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="auth-page">
+    <div class="noise"></div>
+    <header class="site-header" id="trang-chu">
+        <a class="brand" href="../home/index.html" aria-label="ERIFTverse">
+            <span class="brand-mark">E</span>
+            <span>ERIFT<span class="brand-dot">VERSE</span></span>
+        </a>
+        <nav class="catalog-nav" aria-label="Điều hướng tài khoản">
+            <a href="../home/index.html">Trang chủ</a>
+            <a href="../community/index.html">Cộng đồng</a>
+        </nav>
+    </header>
+
+    <main class="auth-main section-wrap">
+        <section class="auth-intro">
+            <p class="eyebrow"><span></span> ERIFTVERSE / MEMBER ACCESS</p>
+            <h1>VÀO CHƠI<br><em>CÙNG CỘNG ĐỒNG.</em></h1>
+            <p>Đăng nhập để theo dõi những cuộc thảo luận, chia sẻ model kit và kết nối với những người cùng đam mê.</p>
+        </section>
+
+        <section class="auth-card" aria-live="polite">
+            <div class="auth-panel" id="login-panel">
+                <p class="eyebrow"><span></span> WELCOME BACK</p>
+                <h2>ĐĂNG<br><em>NHẬP.</em></h2>
+                <form id="login-form" class="auth-form">
+                    <label for="login-username">Username hoặc Gmail</label>
+                    <input id="login-username" type="text" autocomplete="username" placeholder="Nhập username hoặc Gmail" required>
+                    <label for="login-password">Mật khẩu</label>
+                    <input id="login-password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" required>
+                    <button class="button button-primary" type="submit">Đăng nhập <span>↗</span></button>
+                    <p class="form-message" id="login-message" role="status"></p>
+                </form>
+                <p class="auth-switch">Chưa có tài khoản? <button type="button" data-show="register-panel">Đăng ký ngay</button></p>
+            </div>
+
+            <div class="auth-panel" id="register-panel" hidden>
+                <p class="eyebrow"><span></span> JOIN ERIFTVERSE</p>
+                <h2>TẠO<br><em>TÀI KHOẢN.</em></h2>
+                <form id="register-form" class="auth-form">
+                    <label for="register-username">Username</label>
+                    <input id="register-username" type="text" minlength="3" maxlength="30" autocomplete="username" placeholder="3 - 30 ký tự" required>
+                    <label for="register-email">Gmail <span>(bắt buộc)</span></label>
+                    <input id="register-email" type="email" autocomplete="email" placeholder="tenban@gmail.com" required>
+                    <label for="register-phone">Số điện thoại <span>(không bắt buộc)</span></label>
+                    <input id="register-phone" type="tel" autocomplete="tel" placeholder="0901234567">
+                    <label for="register-password">Mật khẩu <span>(8 - 20 ký tự)</span></label>
+                    <input id="register-password" type="password" maxlength="20" autocomplete="new-password" placeholder="8 - 20 ký tự" required>
+                    <label for="register-confirm">Xác nhận mật khẩu</label>
+                    <input id="register-confirm" type="password" maxlength="20" autocomplete="new-password" placeholder="Nhập lại mật khẩu" required>
+                    <button class="button button-primary" type="submit">Đăng ký <span>↗</span></button>
+                    <p class="form-message" id="register-message" role="status"></p>
+                </form>
+                <p class="auth-switch">Đã có tài khoản? <button type="button" data-show="login-panel">Đăng nhập</button></p>
+            </div>
+
+            <div class="auth-panel" id="otp-panel" hidden>
+                <p class="eyebrow"><span></span> EMAIL VERIFICATION</p>
+                <h2>XÁC NHẬN<br><em>EMAIL.</em></h2>
+                <p class="otp-description" id="otp-description"></p>
+                <form id="otp-form" class="auth-form">
+                    <label for="otp-code">Mã OTP 6 số</label>
+                    <input id="otp-code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required>
+                    <button class="button button-primary" type="submit">Xác nhận email <span>↗</span></button>
+                    <p class="form-message" id="otp-message" role="status"></p>
+                </form>
+                <p class="otp-demo" id="otp-demo" hidden></p>
+                <button class="text-link auth-back" type="button" data-show="register-panel">← Sửa thông tin đăng ký</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer section-wrap"><span>© <span id="year"></span> ERIFTverse</span><a href="../home/index.html">Về trang chủ ↗</a></footer>
+    <script src="../script/auth.js"></script>
+</body>
+</html>

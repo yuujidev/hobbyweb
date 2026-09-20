@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERIFTVERSE | Cài đặt bảo mật</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="auth-page account-page">
+    <div class="noise"></div>
+    <header class="site-header">
+        <a class="brand" href="../home/index.html" aria-label="ERIFTverse"><span class="brand-mark">E</span><span>ERIFT<span class="brand-dot">VERSE</span></span></a>
+        <nav class="catalog-nav" aria-label="Điều hướng tài khoản"><a href="../home/index.html">Trang chủ</a><a href="profile.html">Thông tin cá nhân</a></nav>
+    </header>
+    <main class="account-main section-wrap">
+        <section class="account-heading"><p class="eyebrow"><span></span> SECURITY SETTINGS</p><h1>ĐỔI<br><em>MẬT KHẨU.</em></h1><p>Nhập mật khẩu hiện tại để xác minh trước khi tạo mật khẩu mới.</p></section>
+        <section class="account-panel"><p class="eyebrow"><span></span> UPDATE PASSWORD</p><form class="auth-form" id="security-form"><label for="old-password">Mật khẩu hiện tại</label><input id="old-password" type="password" autocomplete="current-password" required><label for="new-password">Mật khẩu mới <span>(8 - 20 ký tự)</span></label><input id="new-password" type="password" maxlength="20" autocomplete="new-password" required><label for="confirm-password">Xác nhận mật khẩu mới</label><input id="confirm-password" type="password" maxlength="20" autocomplete="new-password" required><button class="button button-primary" type="submit">Lưu mật khẩu <span>↗</span></button><p class="form-message" id="security-message" role="status"></p></form></section>
+    </main>
+    <footer class="site-footer section-wrap"><span>© <span id="year"></span> ERIFTverse</span><a href="../home/index.html">Về trang chủ ↗</a></footer>
+    <script src="../script/account.js"></script>
+</body>
+</html>
