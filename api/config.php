@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-const ADMIN_EMAIL = 'eriftverse@gmail.com';
-const ADMIN_PASSWORD = 'admin1817';
+const ADMIN_EMAIL = 'adminemail';
+const ADMIN_PASSWORD = 'passadmin';
 const APP_ENV = 'production';
-const SMTP_USERNAME = 'eriftverse@gmail.com';
-const SMTP_PASSWORD = 'vcjg qevs hxbx drkk';
+const SMTP_USERNAME = 'email';
+const SMTP_PASSWORD = 'App Password';
 
 $dataDirectory = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data';
 if (!is_dir($dataDirectory)) {
