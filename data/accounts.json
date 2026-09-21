@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "username": "awdjln",
+        "email": "danhphattai1817@gmail.com",
+        "phone": "0969613972",
+        "password_hash": "$2y$10$VpLkRnFEXBLhmv10S5esPOpJYp9aZnshc\/iv9GLSqi5cYJPLRMdZ.",
+        "email_verified": true,
+        "role": "member"
+    },
+    {
+        "username": "dawda",
+        "email": "danhtaihcol@gmail.com",
+        "phone": "0969613972",
+        "password_hash": "$2y$10$vzmoH2hzbg1yS9NsVqbHLOv7N4cPYhmw.vkJXvIRHOTww6zFBtBXi",
+        "email_verified": true,
+        "role": "member"
+    }
+]
